@@ -1,1 +1,19 @@
 // Mixins acá
+.flex(@direccion, @justify){
+    display: flex;
+    flex-direction: @direccion;
+    align-items: center;
+    justify-content: @justify;
+}
+
+.imagen{
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.boton{
+    display: inline-block;
+    background-color: @btn-bg-color;
+    border-radius: 8px;
+}
