@@ -8,14 +8,14 @@ const alerts = { m1: "Aprobado", m2: "En curso" };
 export default function Bienvenido() {
   // el código de tu componente acá
   return (
-    <>,
+    <div>,
       <h1>soy Henry!</h1>,
       <h3>{studentName}</h3>
       <ul>
         {techSkills.map((lista, index) => <li key={index}>{lista}</li>)}
       </ul>
-      <Botones alertas = {alerts}/>
-    </>
+      <Botones alerts = {alerts}/>
+    </div>
   );
 }
 

@@ -1,8 +1,10 @@
-export default function SearchBar(props) {
+function SearchBar({characterID}) {
    return (
       <div>
-         {/* <input type='search' />
-         <button onClick={}>Agregar</button> */}
+         <input type='search' />
+         <button onClick={characterID}>Agregar</button>
       </div>
    );
 }
+
+export default SearchBar

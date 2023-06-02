@@ -1,8 +1,5 @@
 import React from "react";
 
-const text1 = 'Modulo 1'
-const text2 = 'Modulo 2'
-
 class Botones extends React.Component{
     constructor(props){
     super(props)
@@ -11,8 +8,8 @@ class Botones extends React.Component{
         return(
             <>
             <div>
-            <button onClick={() => alert(this.props.alertas.m1)}>{text1}</button>
-            <button onClick={() => alert(this.props.alertas.m2)}>{text2}</button>
+            <button onClick={() => alert(this.props.alerts.m1)}>Módulo 1</button>
+            <button onClick={() => alert(this.props.alerts.m2)}>Módulo 2</button>
             </div>
             </>
         )
