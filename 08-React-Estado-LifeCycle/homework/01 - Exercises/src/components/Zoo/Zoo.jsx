@@ -3,7 +3,7 @@ import React from "react";
 import Animals from "../Animals/Animals";
 // eslint-disable-next-line no-unused-vars
 import Species from "../Species/Species";
-// import styledZoo from "./Zoo.module.css";
+import styledZoo from "./Zoo.module.css";
 import { useState } from "react";
 
 
@@ -55,10 +55,12 @@ setZoo({
   }
 
   return (
-    <div>
+    <div className={styledZoo.divContent}>
+      <div className={styledZoo.divContentTitle}>
       <label>Zoo Name:</label>
       <input type="text" value={zoo.zooName} onChange={handleInputChange} />
-      <h1>{zoo.zooName}</h1>
+      <h1 className={styledZoo.title}>{zoo.zooName}</h1>
+      </div>
       <Species species={zoo.species} handleSpecies={handleSpecies} handleAllSpecies={handleAllSpecies}/>
       <Animals animals={zoo.animals}/>
     </div>
