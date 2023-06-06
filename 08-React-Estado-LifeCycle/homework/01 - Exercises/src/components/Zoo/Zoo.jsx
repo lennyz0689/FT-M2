@@ -39,10 +39,18 @@ const Zoo = () => {
   }, [])
 
   const handleSpecies = (event) => {
-
+    const specie = event.target.value
+setZoo({
+  ...zoo,
+  animals: zoo.allAnimals.filter(animal => animal.specie === specie)
+})
   }
 
   const handleAllSpecies = () => {
+    setZoo({
+      ...zoo,
+      animals: zoo.allAnimals
+    })
 
   }
 
