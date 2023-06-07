@@ -47,9 +47,28 @@ export default function Contact() {
     )
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    if (!Object.keys(errors).length) {
+      alert('Datos completos')
+      setInputs({
+        name: '',
+    email: '',
+    message: ''
+      })
+      setErrors({
+        name: '',
+    email: '',
+    message: ''
+      })
+    }else{
+      alert('Debe llenar todos los campos')
+    }
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Nombre:</label>
         <input name='name' placeholder='Escribe tu nombre...' type='text' value={inputs.name} onChange={handleChange}  className={errors.name && 'warning'}/>
         <p className='danger'>{errors.name}</p>
